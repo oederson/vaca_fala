@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>VACA WEB Ver. 0.1</title>
+</head>
+<body>
+     <div class="form-group buttons">
+        <a class="btn btn-danger" href="{{ url_for('pag_upload')}}">Voltar</a>
+    </div>
+    <div class="balao"> /¯{{ linha_de_cima }}\</div>
+    {% for message in frase %}
+        <div class="frase">| {{ message }} |</div>
+    {% endfor %}
+    <div class="balao">\_{{ linha_de_baixo }}/</div>
+    <div class="vaca">   \
+    \   ^__^
+     \  (oo)\_______
+        (__)\       )\/\\
+            ||----w |
+            ||     ||
+    </div>
+</body>
+

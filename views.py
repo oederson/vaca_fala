@@ -1,6 +1,7 @@
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, stream_template, Response, stream_with_context
 from vacaweb import app
 import urllib.parse
+
 
 TEMPLATE_PRINCIPAL = 'principal.html'
 
@@ -15,7 +16,15 @@ def upload_file():
     arquivo = request.files['file']
     if arquivo.filename != '':
         frase = urllib.parse.quote(str(arquivo.read(), 'utf-8'))
-        return redirect(f'/vacafala/{frase}')
+        frase = urllib.parse.unquote(frase)
+        frase = frase.replace('\r', '').split('\n')
+        maior_frase_da_lista = max(frase, key=len)
+        frase = list(map(lambda x: x + " " * (len(maior_frase_da_lista) - len(x)), frase))
+        linha_de_baixo = '_' * len(maior_frase_da_lista)
+        linha_de_cima = '¯' * len(maior_frase_da_lista)
+        return render_template(TEMPLATE_PRINCIPAL, frase=frase, linha_de_baixo=linha_de_baixo,
+                               linha_de_cima=linha_de_cima)
+
 
 
 @app.route('/vacafala/<frase>')
@@ -26,9 +35,5 @@ def fala(frase):
     linha_de_baixo = '_'*len(maior_frase_da_lista)
     linha_de_cima = '¯'*len(maior_frase_da_lista)
     return render_template(TEMPLATE_PRINCIPAL, frase=frase, linha_de_baixo=linha_de_baixo, linha_de_cima=linha_de_cima)
-
-
-
-
 
 

@@ -1,6 +1,15 @@
 .corfundo {
     background-color: black;
 }
+.inputBox {
+    width: 700px;
+}
+.form-label {
+  margin-bottom: 0.5rem;font-family: 'Cousine', monospace;
+  font-size: 2vw;
+  vertical-align: bottom;
+  color: #FFFFFF
+}
 .frase{
     width:100%;
     white-space:pre;

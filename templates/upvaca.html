@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
     <title>Vaca Upload</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cousine&family=Spline+Sans+Mono:wght@700&family=VT323&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code');
+    </style>
   </head>
   <body class="corfundo">
-    <h1 class="frase">Selecione o arquivo .txt para frase da VACA</h1>
-    <h1 class="frase">Ou digite na barra de endereço 127.0.0.1:5000/vacafala/FRASE</h1>
-    <form method="POST" action="" enctype="multipart/form-data">
+      <form method="POST" enctype="multipart/form-data">
+        <div><label class="form-label">Frase:<input class="btn btn-danger" type="text" name="frase"></label></div>
       <p><input class="btn btn-danger" type="file" id="file" name="file" accept=".txt"></p>
       <p><input class="btn btn-danger" type="submit" value="Enviar"></p>
-    </form>
+      </form>
+     <div class="vaca">
+         /¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\
+         | Frase ou arquivo.txt|
+         \_____________________/
+            \
+             \   ^__^
+              \  (oo)\_______
+                 (__)\       )\/\
+                     ||----w |
+                     ||     ||
+     </div>
   </body>
 </html>

@@ -16,16 +16,12 @@
       <p><input class="btn btn-danger" type="file" id="file" name="file" accept=".txt"></p>
       <p><input class="btn btn-danger" type="submit" value="Enviar"></p>
       </form>
-     <div class="vaca">
-         /¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\
-         | Frase ou arquivo.txt|
-         \_____________________/
-            \
-             \   ^__^
-              \  (oo)\_______
-                 (__)\       )\/\
-                     ||----w |
-                     ||     ||
+     <div>
+         <div>
+              {% for message in vaca %}
+            <div class="frase">{{ message }}</div>
+              {% endfor %}
+         </div>
      </div>
   </body>
 </html>

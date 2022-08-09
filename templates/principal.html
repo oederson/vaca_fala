@@ -15,17 +15,9 @@
          <div class="form-group buttons">
             <a class="btn btn-danger" href="{{ url_for('pag_upload')}}">Voltar</a>
          </div>
-            <div class="frase">/¯{{ linha_de_cima }}\</div>
                 {% for message in frase %}
-            <div class="frase">| {{ message }}|</div>
+            <div class="frase">{{ message }}</div>
                 {% endfor %}
-            <div class="frase">\_{{ linha_de_baixo }}/</div>
-        <div class="vaca">   \
-    \   ^__^
-     \  (oo)\_______
-        (__)\       )\/\
-            ||----w |
-            ||     ||
         </div>
     </div>
 </body>

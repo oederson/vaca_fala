@@ -1,5 +1,7 @@
 # vaca_fala
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/7c47f8fa966d538ff1ba/maintainability)](https://codeclimate.com/github/oederson/vaca_fala/maintainability)
+
 Vaca fala é uma implementação web do famoso cli cowsay, tendo como
 objetivo praticar habilidades de desenvolvimento de software. 
 Neste projeto em particular procuramos assimilar os seguintes
